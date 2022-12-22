@@ -1,0 +1,13 @@
+@import './variaveis';
+
+body {
+    background-color: $preto-claro;
+    font-family: $fonte-principal;
+}
+
+
+.container {
+    max-width: 1228px;
+    margin: 0 auto;
+    padding: 0 23px;
+}

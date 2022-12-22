@@ -1,0 +1,91 @@
+@import '../abstract/variaveis';
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 48px;
+
+    &__logo {
+        color: $branco;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        b {
+            color: $roxo;
+        }
+    }
+
+    .menu {
+        &__lista {
+            display: flex;
+            align-items: center;
+            column-gap: 64px;
+        }
+
+        &__link {
+            color: $branco;
+            font-family: $fonte-secundaria;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: 0.01em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            border: 1px solid $roxo;
+            border-radius: 6px;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 21px 30px;
+        }
+    }
+}
+
+@media screen and(max-width: 500px) {
+    .cabecalho {
+        justify-content: center;
+        &__logo {
+            font-size: 24px;
+        }
+        .menu {
+            &__lista {
+                margin-top: 25px;
+                column-gap: 30px;
+                .btn {
+                    padding: 10px 9px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .cabecalho {
+        .menu {
+            &__link, .btn {
+                font-size: 14px;
+                
+            }
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .cabecalho {
+        .menu {
+            &__link, .btn {
+                font-size: 11px;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@import '../abstract/variaveis';
+
+
+.ct-projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 26px;
+    row-gap: 46px;
+
+    .card {
+        background-color: $preto-claro;
+        border: 1px solid $roxo;
+        border-radius: 8px;
+        width: 545px;
+        padding: 26px;
+
+        .card-header {
+            background-color: $preto;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 222px;
+        }
+
+        &__titulo {
+            color: $branco;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31px;
+            margin: 24px 0 22px 0;
+        }
+
+        &__descricao {
+            color: $cinza;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 170%;
+            margin-bottom: 48px;
+        }
+
+        &__btn {
+            display: inline-block;
+            border-radius: 4px;
+            font-family: $fonte-secundaria;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 11px 56px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .btn-verde {
+            color: $preto;
+            background-color: $verde;
+        }
+
+        .btn-transparente {
+            color: $branco;
+            border: 1px solid $verde;
+            margin-left: 24px;
+        }
+    }
+}
+
+
+@media screen and(max-width:500px) {
+    .ct-projetos {
+        .card {
+            &__titulo {
+                font-size: 22px;
+                margin: 16px 0;
+            }
+
+            &__descricao {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+
+            &__btn {
+                padding: 8px 38px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:375px) {
+    .ct-projetos {
+        .card {
+            &__btn {
+                padding: 8px 30px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:320px) {
+    .ct-projetos {
+        .card {
+            &__titulo {
+                font-size: 21px;
+                margin: 16px 0;
+            }
+
+            &__descricao {
+                font-size: 13px;
+                margin-bottom: 25px;
+            }
+
+            &__btn {
+                padding: 8px 20px;
+            }
+        }
+    }
+}

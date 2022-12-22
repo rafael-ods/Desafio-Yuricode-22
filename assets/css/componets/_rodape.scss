@@ -1,0 +1,72 @@
+@import '../abstract/variaveis';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 130px;
+    padding: 2.5rem 2rem;
+
+    &__logo {
+        color: $roxo;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        text-decoration: none;
+    }
+
+    &__lista {
+        display: flex;
+        align-items: center;
+        column-gap: 48px;
+
+        .rodape__lista__item {
+            color: $cinza;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            .rodape__lista__link {
+                color: $verde;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .rodape {
+        justify-content: center;
+        margin-top: 60px;
+        padding: 2rem 1rem;
+        &__logo {
+            font-size: 30px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        &__lista {
+            margin-top: 15px;
+            column-gap: 32px;
+            .rodape__lista__item {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .rodape {
+        
+        &__lista {
+            .rodape__lista__item {
+                font-size: 12px;
+            }
+        }
+    }
+}
